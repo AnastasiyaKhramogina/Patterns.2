@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.netology.testmode.data.UserDataGenerator;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -29,6 +30,7 @@ class AuthTest {
         $(".heading_size_l").shouldHave(text("Личный кабинет"));
         $(".icon_name_bank-2449").shouldBe(visible);
     }
+
     @Test
     @DisplayName("Should fail login with incorrect password")
     void shouldFailLoginWithIncorrectPassword() {
